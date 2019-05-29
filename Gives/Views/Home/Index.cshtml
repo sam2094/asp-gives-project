@@ -1,0 +1,315 @@
+﻿@using Gives.Models
+
+
+<!-- *-*-*-* Slider Start *-*-*-* -->
+<div class="slider-section">
+    <div class="slider-active owl-carousel">
+        @for (var i = 0; i < ViewBag.HomeSlider.Count; i++)
+        {
+            <div class="single-slider slider-screen" style="background-image: url(/Uploads/@ViewBag.HomeSlider[i].Image);">
+                <div class="container">
+                    <div class="slider-content text-white">
+                        <h2 class="b_faddown1">@ViewBag.HomeSlider[i].Title</h2>
+                        <p class="b_faddown2">
+                            @ViewBag.HomeSlider[i].Content
+                            <br />@ViewBag.HomeSlider[i].Content2
+                        </p>
+                        <div class="slider_button b_faddown3">
+                            <a href="@Url.Action("Index","Donation")">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!-- *-*-*-* Slider End *-*-*-* -->
+<!-- *-*-*-* Features Start *-*-*-* -->
+<div class="features-div">
+    <div class="container">
+        <div class="section-name features-section">
+            <h2>What We Do</h2>
+            <div class="text-mini">
+                <h5>Here is all Reasons to Work With Us</h5>
+            </div>
+        </div>
+        <div class="row features">
+            @foreach (Feature ft in ViewBag.Feature)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature @ft.Style ">
+                        <div class="icon-feature">
+                            <i class="fa @ft.Fa_Icon" aria-hidden="true"></i>
+                        </div>
+                        <h4> @ft.Title</h4>
+                        <p>@ft.Content</p>
+                        <a href="@Url.Action("Index", "Feature", new { id=ft.Id })" class="btn btn-min btn-secondary
+						">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Features End *-*-*-* -->
+<!-- *-*-*-* Special Cause Start *-*-*-* -->
+<div class="special-cause">
+    <div class="container">
+        <div class="row giving-clean">
+            <div class="col-md-6 col-xs-12">
+                <img src="~/Uploads/@ViewBag.HomeCause.Image" width="100%" />
+            </div>
+            <div class="col-md-6 col-xs-12 ">
+                <div class="section-name second">
+                    <h1 class="fl-left">@ViewBag.HomeCause.Title</h1>
+                    <h2 class="fl-left">@ViewBag.HomeCause.Title2</h2>
+                    <p align="left" class="fl-left">
+                        @ViewBag.HomeCause.Content
+                    </p>
+                </div>
+                <div class="foundings">
+                    <div class="progress-bar-wrapper big">
+                        <div class="progress-bar-outer">
+                            <div class="clearfix">
+                                <span class="value one value-one">Rised: $@ViewBag.HomeCause.First_Price</span>
+                                <span class="value two value-two">- To go: $@ViewBag.HomeCause.Second_Price</span>
+                            </div>
+                            <div class="progress-bar-inner">
+                                <div class="progress-bar">
+                                    <span data-percent="@ViewBag.HomeCause.Progress">
+                                        <span class="pretng">@ViewBag.HomeCause.Progress %</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns-wrapper">
+                    <a href="@Url.Action("Index","Donation")" class="btn btn-big btn-solid ">
+                        <i class="fa fa-archive"></i>
+                        <span>Make Donation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Special Help End*-*-*-* -->
+<!-- *-*-*-* Recent Causes Start*-*-*-* -->
+<div class="causes-wrapper">
+    <div class="container">
+        <div class="section-name causes-section">
+            <h2>Recent Cause</h2>
+            <div class="text-mini">
+                <h5>Your little support can bring smile of there</h5>
+            </div>
+        </div>
+        <div class="causes">
+            <div class="causes-list row">
+
+                @for (var i = 0; i < 3; i++)
+                {
+                    <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 ugent poor animals-wildlife hidden-sm  ">
+                        <div class="cause content-box">
+                            <div class="img-wrapper">
+                                <div class="overlay">
+                                </div>
+                                <img class="img-responsive" src="~/Uploads/@ViewBag.HomeRecent[i].Image">
+                            </div>
+                            <div class="info-block">
+                                <h4>
+                                    <a >@ViewBag.HomeRecent[i].Recent_Title</a>
+                                </h4>
+                                <p>@ViewBag.HomeRecent[i].Recent_Content</p>
+                                <div class="foundings">
+                                    <div class="progress-bar-wrapper min">
+                                        <div class="progress-bar-outer">
+                                            <p class="values">
+                                                <span class="value-one value one">Raised: $@ViewBag.HomeRecent[i].First_Price</span>
+                                                <span class="value-two value two">To go: $@ViewBag.HomeRecent[i].Second_Price</span>
+                                            </p>
+                                            <div class="progress-bar-inner progress-left">
+                                                <div class="progress-bar">
+                                                    <span data-percent="@ViewBag.HomeRecent[i].Progres">
+                                                        <span class="pretng">@ViewBag.HomeRecent[i].Progres %</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="donet_btn">
+                                    <a href="@Url.Action("Index","Donation")" class="btn btn-big btn-solid">
+                                        <i class="fa fa-archive"></i>
+                                        <span>Donate Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Recent Causes End*-*-*-* -->
+<!-- *-*-*-* Work Sections Start*-*-*-* -->
+<div class="work-float working " style="background-image: url(/Uploads/@ViewBag.HomeWork.Image);">
+    <div class="layout-masking"></div>
+    <div class="container">
+        <div class="work-us">
+            <h2>@ViewBag.HomeWork.Title </h2>
+            <h1>@ViewBag.HomeWork.Title2</h1>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Work Sections End*-*-*-* -->
+<!-- *-*-*-* Voolunters Team Start*-*-*-* -->
+<div class="team-wrapper">
+    <div class="container">
+        <div class="section-name first">
+            <h2>our volunteers</h2>
+            <div class="text-mini">
+                <h5>We are all times support them for their smile</h5>
+            </div>
+        </div>
+
+        <div class="team-members row">
+
+            @for (var i = 0; i < 3; i++)
+            {
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-member">
+                        <div class="best-volunteer">
+                            <div class="voluntee-image">
+                                <a href="@Url.Action("Index", "Volunteers", new { id=@ViewBag.HomeVolunteer[i].Id })">
+                                    <img src="~/Uploads/@ViewBag.HomeVolunteer[i].Image">
+                                </a>
+                            </div>
+                            <ul class="socials">
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Twitter" title="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Facebook" title="">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Youtube" title="">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <span>
+                                <a>@ViewBag.HomeVolunteer[i].Amount</a>
+                            </span>
+                            <h2>
+                                <a href="@Url.Action("Index", "Volunteers", new { id=@ViewBag.HomeVolunteer[i].Id })" title="">@ViewBag.HomeVolunteer[i].Fullname</a>
+                            </h2>
+                            <p>@ViewBag.HomeVolunteer[i].Content</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Voolunters Team End*-*-*-* -->
+<!-- *-*-*-* Voolunters Need Start*-*-*-* -->
+<div class="volunteers-need-wrapper volunteers-wrapper" style="background-image: url(/Uploads/@ViewBag.Need.Image );">
+    <div class="layout-masking"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="weneed-volunt info-block">
+                    <h2>@ViewBag.Need.Title</h2>
+                    <p>
+                        @ViewBag.Need.Content
+                    </p>
+                    <a href="@Url.Action("Index", "BecomeVolunteer")" class="btn btn-big">
+                        <i class="fa fa-heartbeat"></i>Become a Volunteer
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Voolunters Need End*-*-*-* -->
+<!-- *-*-*-* Causes Gallery Start*-*-*-* -->
+<div class="volunteers-wrapper images-gallery-wrapper">
+    <div class="container">
+        <div class="section-name one">
+            <h2>Causes Gallery</h2>
+            <div class="short-text">
+                <h5>Here is a gallery of images.</h5>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (Home_Gallery hg in ViewBag.Gallery)
+            {
+                <div class="col-sm-4 images-outer ">
+                    <div class="images-inner  ">
+                        <div class="nivo-activator"></div>
+                        <div class="images single-images-gl clearfix">
+                            <a href="~/Uploads/@hg.Image" class="nivo-trigger">
+                                <span class="fa fa-arrows-alt"></span>
+                                <img style="width:376px;min-width:376px" src="~/Uploads/@hg.Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- *-*-*-* Causes Gallery End*-*-*-* -->
+<!-- *-*-*-* Recent News  Start*-*-*-* -->
+<section class="blog-area blog-post-wrapper">
+    <div class="container">
+        <div class="section-name first">
+            <h2>Recent News</h2>
+            <div class="text-mini">
+                <h5>Latest news about what's going on</h5>
+            </div>
+        </div>
+        <div class="row">
+            @for(var i=0;i<ViewBag.News.Count;i++)
+            {   
+                <div class="col-md-4 col-sm-4 hidden-sm">
+                    <div class="blog-home blog-box">
+                        <div class="blog-top-desc">
+                            <div class="blog-date">
+                                @Convert.ToDateTime(ViewBag.News[i].Dates).ToString("dd MMMM yyyy")
+                            </div>
+                            <h4>@ViewBag.News[i].Title</h4>
+                            <i class="fa fa-user-o"></i>
+                            <strong>@ViewBag.Author.Fullname</strong>
+                            <i class="fa fa-commenting-o"></i>
+                            <strong>@ViewBag.CommentCount[i] comments</strong>
+                        </div>
+                        <img style="min-width:370px;max-width:370px;min-height:240px;max-height:240px" src="~/Uploads/@ViewBag.News[i].Image">
+                        <div class="blog-btm-desc">
+                            <p>
+                                @ViewBag.News[i].Content.Substring(0, 90)...
+                            </p>
+                            <a href="@Url.Action("Index", "NewsContent", new { id=@ViewBag.News[i].Id })" class="btn btn-min btn-solid">
+                                Read More
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- *-*-*-* Recent News  End*-*-*-* -->

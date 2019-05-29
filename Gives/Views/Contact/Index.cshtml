@@ -1,0 +1,224 @@
+﻿@using Gives.Models
+
+<!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.ContactMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.ContactMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.ContactMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.ContactMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Map Start *-*-*-* -->
+
+        <style>
+
+            #map {
+                height: 630px;
+                width: 100%;
+            }
+        </style>
+        <div id="map"></div>
+        <script>
+    var map;
+    var locatonMap = "@ViewBag.Maps.Map_Location";
+    var settingsArray = locatonMap.split(",");
+    var latMap = Number(settingsArray[0]);
+    var lonMap = Number(settingsArray[1]);
+    var uluru = { lat: latMap, lng: lonMap };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: uluru,
+            zoom: 14,
+            styles: [
+                { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#263c3f' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#6b9a76' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#38414e' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#212a37' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#9ca5b3' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#746855' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#1f2835' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#f3d19c' }]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#2f3948' }]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#17263c' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#515c6d' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ color: '#17263c' }]
+                }
+            ]
+          });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            draggable: true
+        });
+
+
+        marker.addListener('dragend', function (event) {
+            var value = event.latLng.lat() + "," + event.latLng.lng();
+            var input = document.querySelector("input[name=Map_Location]");
+            input.value = value;
+        });
+
+        var contentString = '<div id="content">' +
+        '<h1 class="h1">Gives Support </h1>' +
+            '<p class="lead"> Find Us <a target="_blank" href="http://localhost:2723/Admin/Map">Here </a></p>' + '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content:contentString
+        });
+        marker.addListener("click", function () {
+            infowindow.open(map, marker);
+        });
+      }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX_VYNQXKXPnY_QmUYRlu82JLTJxk44LA&callback=initMap"
+                async defer></script>
+<!-- *-*-*-* Map End *-*-*-* -->
+<!-- *-*-*-* Contact With Us Start *-*-*-* -->
+<div class="contact-with-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-sm-4 contact-adress">
+                        <h4>Adress</h4>
+                        <i class="fa fa-map-marker"></i>
+                        <p>@ViewBag.ContactInformation.Adress</p>
+                    </div>
+                    <div class="col-sm-4 contact-adress">
+                        <h4>Phone</h4>
+                        <i class="fa fa-phone"></i>
+                        <p>+@ViewBag.ContactInformation.First_Number</p>
+                        <p>+@ViewBag.ContactInformation.Second_Number</p>
+                    </div>
+                    <div class="col-sm-4 contact-adress">
+                        <h4>E-mail</h4>
+                        <i class="fa fa-envelope"></i>
+                        <p>@ViewBag.ContactInformation.First_Email</p>
+                        <p>@ViewBag.ContactInformation.Second_Email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="comment-form-section form-for-contact clearfix">
+                    <div class="contact-title ">
+                        <h4>Say Hello to Us</h4>
+                        <p>We will be glad to know your opinion about our work</p>
+                    </div>
+                    <form class="comment-form row altered" method="post">
+                        <div class="field col-sm-4">
+                            <h4>Name</h4>
+                            <input type="text" name="Name">
+                        </div>
+                        <div class="field col-sm-4">
+                            <h4>E-mail</h4>
+                            <input type="email" name="Email">
+                        </div>
+                        <div class="field col-sm-4">
+
+                            <h4>Subject</h4>
+                            <input type="text" name="Subjects">
+                        </div>
+                        <div class="field col-sm-12">
+                            <h4>Message</h4>
+                            <textarea name="Mesage"></textarea>
+                        </div>
+                        <div class="field col-sm-4">
+                            <button id="btn-contact" class="btn btn-big btn-solid">
+                                <i class="fa fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                    @if (ViewBag.Error != null)
+    {
+                <h3 style="color:red;margin-top:30px">@ViewBag.Error</h3>
+}
+else if (ViewBag.Success != null)
+{
+                <div style="height:100px; background-color:#F2B25B; border-radius:10px;text-align:center;padding-top:35px;margin-top:30px">
+                    <h2 style="color:white; font-family:Raleway, sans-serif;">@ViewBag.Success</h2>
+                </div>
+}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Contact With Us End *-*-*-* -->

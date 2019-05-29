@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GivesModelStoreContainer" CdmEntityContainer="GivesEntities">
+    <EntitySetMapping Name="About_Masking">
+      <EntityTypeMapping TypeName="GivesModel.About_Masking">
+        <MappingFragment StoreEntitySet="About_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="About_Partners">
+      <EntityTypeMapping TypeName="GivesModel.About_Partners">
+        <MappingFragment StoreEntitySet="About_Partners">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="About_Section">
+      <EntityTypeMapping TypeName="GivesModel.About_Section">
+        <MappingFragment StoreEntitySet="About_Section">
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrators">
+      <EntityTypeMapping TypeName="GivesModel.Administrator">
+        <MappingFragment StoreEntitySet="Administrator">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog_List_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Blog_List_Masking">
+        <MappingFragment StoreEntitySet="Blog_List_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Grid_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Grid_Masking">
+        <MappingFragment StoreEntitySet="Causes_Grid_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Grid_Recent">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Grid_Recent">
+        <MappingFragment StoreEntitySet="Causes_Grid_Recent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Recent_Title" ColumnName="Recent_Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="First_Price" ColumnName="First_Price" />
+          <ScalarProperty Name="Second_Price" ColumnName="Second_Price" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_List_Recent">
+      <EntityTypeMapping TypeName="GivesModel.Causes_List_Recent">
+        <MappingFragment StoreEntitySet="Causes_List_Recent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Recent_Title" ColumnName="Recent_Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="First_Price" ColumnName="First_Price" />
+          <ScalarProperty Name="Second_Price" ColumnName="Second_Price" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Single_Cards">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Single_Cards">
+        <MappingFragment StoreEntitySet="Causes_Single_Cards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstPrice" ColumnName="FirstPrice" />
+          <ScalarProperty Name="SecondPrice" ColumnName="SecondPrice" />
+          <ScalarProperty Name="ThirdPrice" ColumnName="ThirdPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Single_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Single_Masking">
+        <MappingFragment StoreEntitySet="Causes_Single_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Single_Paypal">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Single_Paypal">
+        <MappingFragment StoreEntitySet="Causes_Single_Paypal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstPrice" ColumnName="FirstPrice" />
+          <ScalarProperty Name="SecondPrice" ColumnName="SecondPrice" />
+          <ScalarProperty Name="ThirdPrice" ColumnName="ThirdPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Single_PayTitle">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Single_PayTitle">
+        <MappingFragment StoreEntitySet="Causes_Single_PayTitle">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_Single_Recent">
+      <EntityTypeMapping TypeName="GivesModel.Causes_Single_Recent">
+        <MappingFragment StoreEntitySet="Causes_Single_Recent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="First_Price" ColumnName="First_Price" />
+          <ScalarProperty Name="Second_Price" ColumnName="Second_Price" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="Donors" ColumnName="Donors" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Content1" ColumnName="Content1" />
+          <ScalarProperty Name="Content2" ColumnName="Content2" />
+          <ScalarProperty Name="Content3" ColumnName="Content3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Map">
+      <EntityTypeMapping TypeName="GivesModel.Contact_Map">
+        <MappingFragment StoreEntitySet="Contact_Map">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Map_Location" ColumnName="Map_Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Contact_Masking">
+        <MappingFragment StoreEntitySet="Contact_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Message">
+      <EntityTypeMapping TypeName="GivesModel.Contact_Message">
+        <MappingFragment StoreEntitySet="Contact_Message">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Message_Content" ColumnName="Message_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Footers">
+      <EntityTypeMapping TypeName="GivesModel.Footer">
+        <MappingFragment StoreEntitySet="Footer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Google" ColumnName="Google" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="LInkedin" ColumnName="LInkedin" />
+          <ScalarProperty Name="Scype" ColumnName="Scype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gallery_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Gallery_Masking">
+        <MappingFragment StoreEntitySet="Gallery_Masking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Cause">
+      <EntityTypeMapping TypeName="GivesModel.Home_Cause">
+        <MappingFragment StoreEntitySet="Home_Cause">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="First_Price" ColumnName="First_Price" />
+          <ScalarProperty Name="Second_Price" ColumnName="Second_Price" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Gallery">
+      <EntityTypeMapping TypeName="GivesModel.Home_Gallery">
+        <MappingFragment StoreEntitySet="Home_Gallery">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Need">
+      <EntityTypeMapping TypeName="GivesModel.Home_Need">
+        <MappingFragment StoreEntitySet="Home_Need">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Recent">
+      <EntityTypeMapping TypeName="GivesModel.Home_Recent">
+        <MappingFragment StoreEntitySet="Home_Recent">
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Recent_Title" ColumnName="Recent_Title" />
+          <ScalarProperty Name="Recent_Content" ColumnName="Recent_Content" />
+          <ScalarProperty Name="First_Price" ColumnName="First_Price" />
+          <ScalarProperty Name="Second_Price" ColumnName="Second_Price" />
+          <ScalarProperty Name="Progres" ColumnName="Progres" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Volunteer">
+      <EntityTypeMapping TypeName="GivesModel.Home_Volunteer">
+        <MappingFragment StoreEntitySet="Home_Volunteer">
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Youtube" ColumnName="Youtube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayPal_Donate">
+      <EntityTypeMapping TypeName="GivesModel.PayPal_Donate">
+        <MappingFragment StoreEntitySet="PayPal_Donate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="GivesModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post_To_Tag">
+      <EntityTypeMapping TypeName="GivesModel.Post_To_Tag">
+        <MappingFragment StoreEntitySet="Post_To_Tag">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Post_Id" ColumnName="Post_Id" />
+          <ScalarProperty Name="Tag_Id" ColumnName="Tag_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="GivesModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GivesModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visa_Master_Donate">
+      <EntityTypeMapping TypeName="GivesModel.Visa_Master_Donate">
+        <MappingFragment StoreEntitySet="Visa_Master_Donate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Pay_Type" ColumnName="Pay_Type" />
+          <ScalarProperty Name="Card_Type" ColumnName="Card_Type" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Card_CVC" ColumnName="Card_CVC" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Slider">
+      <EntityTypeMapping TypeName="GivesModel.Home_Slider">
+        <MappingFragment StoreEntitySet="Home_Slider">
+          <ScalarProperty Name="Content2" ColumnName="Content2" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_Work_Us">
+      <EntityTypeMapping TypeName="GivesModel.Home_Work_Us">
+        <MappingFragment StoreEntitySet="Home_Work_Us">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Features">
+      <EntityTypeMapping TypeName="GivesModel.Feature">
+        <MappingFragment StoreEntitySet="Feature">
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Fa_Icon" ColumnName="Fa_Icon" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes_List_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Causes_List_Masking">
+        <MappingFragment StoreEntitySet="Causes_List_Masking">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gallery_Images">
+      <EntityTypeMapping TypeName="GivesModel.Gallery_Images">
+        <MappingFragment StoreEntitySet="Gallery_Images">
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Adress">
+      <EntityTypeMapping TypeName="GivesModel.Contact_Adress">
+        <MappingFragment StoreEntitySet="Contact_Adress">
+          <ScalarProperty Name="Second_Number" ColumnName="Second_Number" />
+          <ScalarProperty Name="First_Number" ColumnName="First_Number" />
+          <ScalarProperty Name="Second_Email" ColumnName="Second_Email" />
+          <ScalarProperty Name="First_Email" ColumnName="First_Email" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="GivesModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="GivesModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="States" ColumnName="States" />
+          <ScalarProperty Name="Second_Content" ColumnName="Second_Content" />
+          <ScalarProperty Name="First_Content" ColumnName="First_Content" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Dates" ColumnName="Dates" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News_To_Category">
+      <EntityTypeMapping TypeName="GivesModel.News_To_Category">
+        <MappingFragment StoreEntitySet="News_To_Category">
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="News_Id" ColumnName="News_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Become_Volunteer">
+      <EntityTypeMapping TypeName="GivesModel.Become_Volunteer">
+        <MappingFragment StoreEntitySet="Become_Volunteer">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Messages">
+      <EntityTypeMapping TypeName="GivesModel.User_Messages">
+        <MappingFragment StoreEntitySet="User_Messages">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Mesage" ColumnName="Mesage" />
+          <ScalarProperty Name="Subjects" ColumnName="Subjects" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog_Single_Masking">
+      <EntityTypeMapping TypeName="GivesModel.Blog_Single_Masking">
+        <MappingFragment StoreEntitySet="Blog_Single_Masking">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Text_Second" ColumnName="Text_Second" />
+          <ScalarProperty Name="Text_First" ColumnName="Text_First" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentNews">
+      <EntityTypeMapping TypeName="GivesModel.CommentNew">
+        <MappingFragment StoreEntitySet="CommentNews">
+          <ScalarProperty Name="Users_Id" ColumnName="Users_Id" />
+          <ScalarProperty Name="News_Id" ColumnName="News_Id" />
+          <ScalarProperty Name="Dates" ColumnName="Dates" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentPosts">
+      <EntityTypeMapping TypeName="GivesModel.CommentPost">
+        <MappingFragment StoreEntitySet="CommentPost">
+          <ScalarProperty Name="Users_Id" ColumnName="Users_Id" />
+          <ScalarProperty Name="Post_Id" ColumnName="Post_Id" />
+          <ScalarProperty Name="Dates" ColumnName="Dates" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,56 @@
+﻿body {
+}
+div.cause-pages ul.pagination {
+    display: inline-block;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    line-height: 40px;
+}
+
+    div.cause-pages ul.pagination li {
+        display: block;
+        float: left;
+        padding: 0 10px;
+    }
+
+        div.cause-pages ul.pagination li:hover a,
+        .pagination li i {
+            color: #de1219;
+        }
+
+        div.cause-pages ul.pagination li:first-child,
+        .pagination li:nth-child(2) {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        div.cause-pages ul.pagination li:last-child {
+            border-left: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        div.cause-pages ul.pagination li:nth-child(2),
+        .pagination li:last-child {
+            padding: 0 20px;
+        }
+
+        div.cause-pages ul.pagination li a,
+        div.cause-pages ul.pagination li span {
+            display: block;
+            padding: 0 5px;
+            color: #444;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        div.cause-pages ul.pagination li.active a,
+        div.cause-pages ul.pagination li.active span {
+            color: #de1219;
+        }
+
+        div.cause-image{
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }

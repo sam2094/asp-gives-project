@@ -1,0 +1,298 @@
+﻿@using Gives.Models
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Web;
+@using System.Web.Mvc;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gives</title>
+    <link rel="shortcart icon" href="~/Uploads/201.png">
+    <link rel="stylesheet" href="~/Public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Public/owl-carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="~/Public/css/animate.css">
+    <link rel="stylesheet" href="~/Public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Public/css/meanmenu.css">
+    <link rel="stylesheet" href="~/Public/css/main.css">
+    <link rel="stylesheet" href="~/Public/css/style2.css">
+
+</head>
+
+<body>
+    <!-- *-*-*-* Navbar Start *-*-*-* -->
+    <header>
+        <div id="search">
+            <div class="container">
+                <div class="row">
+                    <form action="#" class="col-xs-12">
+                        <input type="text" placeholder="Type and Hit Enter">
+                        <i id="search-close" class="fa fa-close"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 div-logo">
+                        <a href="@Url.Action("Index", "Home")">Gives</a>
+                    </div>
+
+                    <div class="col-md-8 div-menu">
+                        <ul class="menu">
+                            <li class="active">
+                                <a id="activeLink" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li>
+                                <span>Causes</span>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="@Url.Action("Index", "CausesGrid")">Causes Grid</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "CausesList")">Causes List</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "CausesSingle")" class="active">Causes Single</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Gallery")">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "About")">About</a>
+                            </li>
+                            <li>
+                                <span>Blog</span>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="@Url.Action("Index", "BlogList")">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "BlogSingle")">Posts</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Contact")">Contact</a>
+                            </li>
+                            <li>
+                                @if (Session["UserLogged"] != null)
+                                {
+                                    User activeUser = (User)Session["UserLogged"];
+                                    <span style="font-weight:800;color:#444;"><i style="padding-right:5px;" class="fa fa-user"></i> @activeUser.Name </span>
+
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="@Url.Action("Edit", "UserAccount", new { id = activeUser.Id })">EDIT INFORMATION</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Logout", "UserAccount")">EXIT</a>
+                                        </li>
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <span><a href="@Url.Action("Login", "UserAccount")" style="font-weight:800;color:#444;">Log In</a> </span>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 col-xs-12	">
+                        <div id="search-toggle">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- *-*-*-* Navbar-Mobile Start *-*-*-* -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mobile-area">
+                                <div class="mobile-menu">
+                                    <nav id="mobile-nav">
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("Index", "Home")">Home </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "CausesGrid")">Causes</a>
+                                                <ul class="single">
+                                                    <li>
+                                                        <a href="@Url.Action("Index", "CausesGrid")">Causes Grid</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("Index", "CausesList")">Causes List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("Index", "CausesSingle")" class="active">Causes Single</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "Gallery")"> gallery </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "About")"> About </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "BlogList")">Blog</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="@Url.Action("Index", "BlogList")">Blog List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("Index", "BlogSingle")">Blog Single</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "Contact")">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *-*-*-* Navbar-Mobile End *-*-*-* -->
+        </nav>
+    </header>
+    <!-- *-*-*-* Navbar End *-*-*-* -->
+    @RenderBody()
+    <!-- *-*-*-* Footer Start*-*-*-* -->
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                @{
+        GivesEntities bd = new GivesEntities();
+        ViewBag.Footer = bd.Footers.First();
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-wrap clearfix">
+                    <div class="div-logo">
+                        <a href="index.html">gives</a>
+                    </div>
+                    <p>You can always communicate with us with any of the following social networks.</p>
+                    <div class="footer-icons">
+                        <a href="@ViewBag.Footer.Twitter">
+                            <i class="fa fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="@ViewBag.Footer.Google">
+                            <i class="fa fa-google-plus"></i>
+                            <span>Google +</span>
+                        </a>
+                        <a href="@ViewBag.Footer.Facebook">
+                            <i class="fa fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="@ViewBag.Footer.LInkedin">
+                            <i class="fa fa-linkedin"></i>
+                            <span>Linkedin</span>
+                        </a>
+                        <a href="@ViewBag.Footer.Scype">
+                            <i class="fa fa-skype"></i>
+                            <span>Skype</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                }
+                <div class="col-md-2 col-sm-6 ">
+                    <div class="square-link  clearfix">
+                        <h4 class="title">Quick Links</h4>
+                        <div class="links">
+                            <a href="@Url.Action("Index", "About")">
+                                <i class="fa fa-angle-double-right"></i>About Us
+                            </a>
+                            <a href="@Url.Action("Index", "BlogSingle")">
+                                <i class="fa fa-angle-double-right"></i>Blog
+                            </a>
+                            <a href="@Url.Action("Index", "Gallery")">
+                                <i class="fa fa-angle-double-right"></i>Gallery
+                            </a>
+                            <a href="@Url.Action("Index", "CausesSingle")">
+                                <i class="fa fa-angle-double-right"></i> Your Support
+                            </a>
+                            <a href="@Url.Action("Index", "CausesList")">
+                                <i class="fa fa-angle-double-right"></i>Causes
+                            </a>
+                            <a href="@Url.Action("Index", "Contact")">
+                                <i class="fa fa-angle-double-right"></i>Contact with us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @{GivesEntities db = new GivesEntities();
+        ViewBag.Tag = db.Tags.Where(tg => tg.Status == 0).ToList();
+            <div class="col-md-3 col-sm-6 ">
+                <div class="footer-tags  clearfix">
+                    <h4 class="title">Tags</h4>
+                    <div class="tag-div">
+                        @foreach (Tag tg in ViewBag.Tag)
+            {
+                <a href="@Url.Action("Index", "PostToTag", new { id=tg.Id })">
+                    <span>@tg.Name</span>
+                </a>
+}
+                    </div>
+                </div>
+            </div>
+                }
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="subcribe clearfix">
+                        <h4 class="title">Subscribe</h4>
+                        <p>Subscribe to our site. This will be a great support for us !</p>
+                        <form action="#">
+                            <div class="footer-subs">
+                                <input type="email" name="e-mail" placeholder="Your E-mail">
+                            </div>
+                            <div class="footer-subs">
+                                <button class="btn btn-min btn-solid">
+                                    <span>Subscibe</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-last">
+            <div class="container">
+                <h5>Copyright ©2017 Gives. All Rights Reserved</h5>
+            </div>
+        </div>
+        <div id="scroller">
+            <i class="fa fa-angle-up"></i>
+        </div>
+    </footer>
+    <!-- *-*-*-* Footer End*-*-*-* -->
+    <!-- Scripts -->
+    <script type="text/javascript" src="~/Public/js/jquery2.min.js"></script>
+    <script type="text/javascript" src="~/Public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Public/js/jquery.meanmenu.js"></script>
+    <script type="text/javascript" src="~/Public/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBEypW1XtGLWpikFPcityAok8rhJzzWRw"></script>
+    <script type="text/javascript" src="~/Public/js/gmaps.js"></script>
+    <script type="text/javascript" src="~/Public/js/plugins.js"></script>
+    <script type="text/javascript" src="~/Public/js/progress-bar-appear.js"></script>
+    <script type="text/javascript" src="~/Public/js/main.js"></script>
+</body>
+
+</html>

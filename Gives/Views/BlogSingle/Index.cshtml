@@ -1,0 +1,153 @@
+﻿@using Gives.Models
+@model PagedList.IPagedList<Gives.Models.Post>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*Post List Index*@
+
+<!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.BlogSingleMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.BlogSingleMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.BlogSingleMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.BlogSingleMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Blog start*-*-*-* -->
+<div class="blog-page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="blog-posts col-md-8">
+
+                @for(var i=0;i < Model.Count;i++)
+                {
+                    <div style="margin-bottom:40px" class="blog-box">
+                        <div class="blog-top-desc">
+                            <div class="blog-date">
+                                @Convert.ToDateTime(Model[i].Date).ToString("dd MMMM yyyy")
+                            </div>
+                            <h4>@Model[i].Title</h4>
+                            <i class="fa fa-user-o"></i>
+                            <strong>@ViewBag.Author.Fullname</strong>
+                            <i class="fa fa-commenting-o"></i>
+                            <strong>@ViewBag.CommentCount[i] Comments</strong>
+                        </div>
+                        <img style="min-width:750px;max-width:750px;min-height:312px;max-height:312px;" class="img-responsive" src="~/Uploads/@Model[i].Image">
+                        <div class="blog-btm-desc">
+                            <p>
+                                @Model[i].Content.Substring(0, 150)...
+                            </p>
+                            <a href="@Url.Action("Index", "PostContent", new { id=@Model[i].Id })" class="btn btn-min btn-solid">
+                                Read More
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+                <div class="cause-pages">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }))
+                </div>
+            </div>
+
+            <!-- sidebar -->
+            <div class="sidebar-wrapper col-md-4">
+                <div class="sidebar">
+                    <div class="search-bar">
+                        <form action="#">
+                            <div class="field">
+                                <input type="text" name="search" placeholder="Type and Hit Enter">
+                                <button>
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Categories of News</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="categories">
+                            @for (var i = 0; i < ViewBag.Category.Count; i++)
+    {
+                        <a href="@Url.Action("Index", "NewsWithCategory", new { id=ViewBag.Category[i].Id })">
+                            @ViewBag.Category[i].Name
+                            <span>@ViewBag.NewsCount[i]</span>
+                        </a>
+}
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Recent Posts</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="recent-posts clearfix">
+                            @foreach (Post pt in ViewBag.Post)
+                            {
+                                <div class="post clearfix">
+                                    <div class="image-wrapper">
+                                        <div class="mask">
+                                            <a href="@Url.Action("Index", "PostContent", new { id=@pt.Id })">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                        <img style="min-width:75px;max-width:75px;min-height:75px;max-height:75px" src="~/Uploads/@pt.Image">
+                                    </div>
+                                    <div class="info-block">
+                                        <a href="@Url.Action("Index", "PostContent", new { id=@pt.Id })">
+                                            <h4>@pt.Title</h4>
+                                        </a>
+                                        <div class="meta">
+                                            <p>
+                                                <i class="fa fa-user"></i>@ViewBag.Author.Fullname
+                                            </p>
+                                            <span>&#x7C;</span>
+                                            <p>
+                                                <i class="fa fa-clock-o"></i>@Convert.ToDateTime(pt.Date).ToString("dd MMMM , yyyy")
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Tags to Posts</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            @foreach (Tag tg in ViewBag.Tag)
+                            {
+                                <a href="@Url.Action("Index", "PostToTag", new { id=tg.Id })">
+                                    <span>@tg.Name</span>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Blog End*-*-*-* -->

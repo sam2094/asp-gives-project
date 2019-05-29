@@ -1,0 +1,100 @@
+C:\Users\Samir\source\repos\Gives\Gives\bin\ApplicationInsights.config
+C:\Users\Samir\source\repos\Gives\Gives\bin\Gives.dll.config
+C:\Users\Samir\source\repos\Gives\Gives\bin\Gives.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Gives.pdb
+C:\Users\Samir\source\repos\Gives\Gives\bin\Antlr3.Runtime.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\EntityFramework.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\EntityFramework.SqlServer.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.Web.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\Newtonsoft.Json.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Helpers.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Mvc.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Optimization.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Razor.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.Razor.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\WebGrease.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\EntityFramework.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\EntityFramework.SqlServer.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Helpers.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Mvc.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Optimization.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.Razor.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\System.Web.WebPages.Razor.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Antlr3.Runtime.pdb
+C:\Users\Samir\source\repos\Gives\Gives\bin\Newtonsoft.Json.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\Microsoft.AI.Web.xml
+C:\Users\Samir\source\repos\Gives\Gives\obj\Debug\Gives.csproj.CoreCompileInputs.cache
+C:\Users\Samir\source\repos\Gives\Gives\obj\Debug\Gives.dll
+C:\Users\Samir\source\repos\Gives\Gives\obj\Debug\Gives.pdb
+C:\Users\Samir\source\repos\Gives\Gives\bin\PagedList.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\PagedList.xml
+C:\Users\Samir\source\repos\Gives\Gives\bin\PagedList.Mvc.dll
+C:\Users\Samir\source\repos\Gives\Gives\bin\PagedList.Mvc.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\ApplicationInsights.config
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Gives.dll.config
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Gives.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Gives.pdb
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Antlr3.Runtime.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\EntityFramework.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\EntityFramework.SqlServer.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.DependencyCollector.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.Web.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.WindowsServer.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.ApplicationInsights.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.Web.Infrastructure.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Newtonsoft.Json.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\PagedList.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\PagedList.Mvc.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Helpers.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Mvc.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Optimization.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Razor.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.Deployment.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.Razor.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\WebGrease.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\EntityFramework.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\EntityFramework.SqlServer.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\PagedList.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\PagedList.Mvc.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Helpers.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Mvc.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Optimization.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.Razor.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.Deployment.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\System.Web.WebPages.Razor.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Antlr3.Runtime.pdb
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Newtonsoft.Json.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.ApplicationInsights.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.DependencyCollector.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.WindowsServer.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\bin\Microsoft.AI.Web.xml
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\obj\Debug\Gives.csproj.CoreCompileInputs.cache
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\obj\Debug\Gives.csproj.CopyComplete
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\obj\Debug\Gives.dll
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\obj\Debug\Gives.pdb
+E:\Мои файлы\Программирование\My Projects\Samir Hasanov (P 204) Final Project\Gives (Full Project )\Gives\obj\Debug\Gives.csprojAssemblyReference.cache

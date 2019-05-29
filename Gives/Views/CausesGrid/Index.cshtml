@@ -1,0 +1,83 @@
+﻿@using Gives.Models
+@model PagedList.IPagedList<Gives.Models.Home_Recent>
+@using PagedList.Mvc
+
+@*-- *-*-*-* Causes-Image Start *-*-*-* -->*@
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.CauseMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.CauseMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.CauseMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.CauseMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Causes Gallery Start *-*-*-* -->
+<section class="causes-gallery">
+    <div class="causes-wrapper">
+        <div class="container">
+            <div class="section-name causes-section">
+                <h2>Recent Cause</h2>
+                <div class="text-mini">
+                    <h5>Your little support can bring smile of there</h5>
+                </div>
+            </div>
+            <div class="causes">
+                <div class="causes-list row">
+                    @foreach (var recent in Model)
+                    {
+                        <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 legal health">
+                            <div class="cause content-box">
+                                <div class="img-wrapper">
+                                    <div class="overlay">
+                                    </div>
+                                    <img class="img-responsive" src="~/Uploads/@recent.Image">
+                                </div>
+                                <div class="info-block">
+                                    <h4>
+                                        <a>@recent.Recent_Title</a>
+                                    </h4>
+                                    <p>@recent.Recent_Content</p>
+                                    <div class="foundings">
+                                        <div class="progress-bar-wrapper min">
+                                            <div class="progress-bar-outer">
+                                                <p class="values">
+                                                    <span class="value one">Raised: $@recent.First_Price</span>-
+                                                    <span class="value two">To go: $@recent.Second_Price</span>
+                                                </p>
+                                                <div class="progress-bar-inner progress-left">
+                                                    <div class="progress-bar">
+                                                        <span data-percent="@recent.Progres">
+                                                            <span class="pretng">@recent.Progres%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="donet_btn">
+                                        <a href="@Url.Action("Index","Donation")" class="btn btn-big btn-solid">
+                                            <i class="fa fa-archive"></i>
+                                            <span>Donate Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="cause-pages">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }))
+            </div>
+        </div>
+    </div>
+</section>
+<!-- *-*-*-* Causes Gallery End *-*-*-* -->

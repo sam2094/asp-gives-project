@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Gives.Models.Gallery_Images>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Gallery Images</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="height:350px;max-height:350px;min-height:350px;width:50%;min-width:50%;max-width:50%;" src="~/Uploads/@item.Image" class="img-circle">
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>

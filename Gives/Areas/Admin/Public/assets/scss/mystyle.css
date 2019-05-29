@@ -1,0 +1,35 @@
+﻿
+div.form-responce .form-group{
+    padding-top:60px;
+    text-align:center!important;
+}
+div.form-responce .a {
+    padding-top: 60px;
+  color:white!important;
+}
+div.form-responce .btn {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 10px;
+    background: rgb(84,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    width:120px;
+}
+
+div.form-responce .btn:hover{
+    background: rgb(53, 167, 110);
+}
+.return-back{
+    padding-top:20px;
+}
+h3.edit-error {
+    float: left;
+    color: red;
+    padding-top:20px;
+}
+div.create{
+    padding-top:20px!important;
+}

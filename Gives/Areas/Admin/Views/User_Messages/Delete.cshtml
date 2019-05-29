@@ -1,0 +1,59 @@
+﻿@model Gives.Models.User_Messages
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete message</h2>
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subjects)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subjects)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mesage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mesage)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+<div class="form-group form-responce">
+    <input type="submit" value="Delete" class="btn btn-default" />
+    <div class="return-back">
+        <h3>@Html.ActionLink("Back to List", "Index")</h3>
+    </div>
+</div>
+}
+</div>

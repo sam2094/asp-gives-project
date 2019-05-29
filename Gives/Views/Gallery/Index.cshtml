@@ -1,0 +1,43 @@
+﻿ <!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.GalleryMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.GalleryMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.GalleryMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.GalleryMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Gallery Start *-*-*-* -->
+
+<div class="gallery-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="gallery clearfix">
+                    <div class="nivo-activator"></div>
+                    @for(var i = 0; i< ViewBag.Gallery.Count; i++)
+                     {
+                          <div class="gallery-image @ViewBag.Gallery[i].Width ">
+                        <div class="image gal-img">
+                            <a href="~/Uploads/@ViewBag.Gallery[i].Image">
+                                <span>
+                                    <i class="fa fa-arrows-alt"></i>
+                                </span>
+                                <img class="img-responsive" src="~/Uploads/@ViewBag.Gallery[i].Image">
+                            </a>
+                        </div>
+                    </div>
+                     }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Gallery End *-*-*-* -->

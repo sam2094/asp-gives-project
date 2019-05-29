@@ -1,0 +1,29 @@
+﻿@using Gives.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="features-div">
+    <div class="container">
+        <div class="section-name features-section">
+            <h2>What We Do</h2>
+            <div class="text-mini">
+                <h5>Here is all Reasons to Work With Us</h5>
+            </div>
+        </div>
+        <div class="row features">
+            <div class="col-md-12 col-sm-6">
+                <div class="">
+                    <div class="icon-feature">
+                        <i class="fa @ViewBag.activeFeature.Fa_Icon" aria-hidden="true"></i>
+                    </div>
+                    <h4 style="font-family:Raleway, sans-serif; font-size:20px;font-weight:600;margin-bottom:30px">@ViewBag.activeFeature.Title </h4>
+                    <p>@ViewBag.activeFeature.Information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

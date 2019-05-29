@@ -1,0 +1,227 @@
+﻿ <!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.CauseMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.CauseMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.CauseMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.CauseMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Causes-Single Help Start *-*-*-* -->
+<div class="causes-help">
+    <div class="container">
+        <div class="row cause-row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="image-wrapper">
+                    <img class="img-responsive" src="~/Uploads/@ViewBag.SingleRecent.Image">
+                </div>
+                <div class="help-wrapper">
+                    <h2>@ViewBag.SingleRecent.Title</h2>
+                    <div class="help-statistic clearfix">
+                        <h5>
+                            <i class="fa fa-heart-o"></i>@ViewBag.SingleRecent.Donors donors
+                        </h5>
+                        <h5>
+                            <i class="fa fa-clock-o"></i>@ViewBag.SingleRecent.Days days
+                        </h5>
+                    </div>
+                </div>
+                <div class="cause-bar clearfix ">
+                    <div class="foundings">
+                        <div class="progress-bar-wrapper min">
+                            <div class="progress-bar-outer">
+
+                                <p class="values">
+                                    <span class="value one">Rised: $@ViewBag.SingleRecent.First_Price</span>/
+                                    <span class="value two"> To go: $@ViewBag.SingleRecent.Second_Price</span>
+                                </p>
+                                <div class="progress-bar-inner">
+                                    <div class="progress-bar">
+                                        <span data-percent="@ViewBag.SingleRecent.Progress">
+                                            <span class="pretng">@ViewBag.SingleRecent.Progress%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="@Url.Action("Index","Donation")" class="btn btn-big btn-solid ">
+                        <i class="fa fa-archive"></i>
+                        <span>Make Donation</span>
+                    </a>
+                </div>
+                <div class="info-block">
+                    <p>
+                        @ViewBag.SingleRecent.Content1
+                    </p>
+                    <p>
+                        @ViewBag.SingleRecent.Content2
+
+                    </p>
+                    <p>
+                        @ViewBag.SingleRecent.Content3
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes-Single Help End *-*-*-* -->
+<!-- *-*-*-* Causes-Single Pay System Start *-*-*-* -->
+<div class="pay-system">
+    <div class="donation-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="donation clearfix">
+                        <ul class="tabs-switcher nav nav-tabs clearfix">
+                            <li class="active">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <i class="fa fa-paypal"></i>PayPlay
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-2">
+                                    <i class="fa fa-cc-visa"></i>Visa / MasterCard
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane row active" id="tab-1">
+                                <p class="col-xs-12">
+                                    @ViewBag.SinglePayTitle.Title
+                                </p>
+                                <form class="donation-form col-xs-12 row" method="post">
+                                    <div class="field col-sm-6">
+                                        <h4>Donation Amount</h4>
+                                        <div class="radio-inputs">
+                                            <input type="radio" id="amount-1" name="Amount" value="@ViewBag.SinglePayPal.FirstPrice">
+                                            <label for="amount-1">
+                                                <span></span>$@ViewBag.SinglePayPal.FirstPrice
+                                            </label>
+                                            <input type="radio" id="amount-2" name="Amount" value="@ViewBag.SinglePayPal.SecondPrice">
+                                            <label for="amount-2">
+                                                <span></span>$@ViewBag.SinglePayPal.SecondPrice
+                                            </label>
+                                            <input type="radio" id="amount-3" name="Amount" value="@ViewBag.SinglePayPal.ThirdPrice">
+                                            <label for="amount-3">
+                                                <span></span>$@ViewBag.SinglePayPal.ThirdPrice
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>PayPal</h4>
+                                        <input type="number" name="Card_Number">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <button class="btn btn-big btn-solid ">
+                                            <i class="fa fa-archive"></i>
+                                            <span style="color:white">Donate Now</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane row" id="tab-2">
+                                <p class="col-xs-12">
+                                    @ViewBag.SinglePayTitle.Title
+                                </p>
+                                <form class="donation-form col-xs-12 row" method="post">
+                                    <div class="field col-sm-6">
+                                        <h4>First Name</h4>
+                                        <input type="text" name="Firstname">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>Last Name</h4>
+                                        <input type="text" name="Lastname">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>Donation Amount</h4>
+                                        <div class="radio-inputs">
+                                            <input type="radio" id="amount-4" name="Amount" value="@ViewBag.SingleCards.FirstPrice">
+                                            <label for="amount-4">
+                                                <span></span>$@ViewBag.SingleCards.FirstPrice
+                                            </label>
+                                            <input type="radio" id="amount-6" name="Amount" value="@ViewBag.SingleCards.SecondPrice">
+                                            <label for="amount-6">
+                                                <span></span>$@ViewBag.SingleCards.SecondPrice
+                                            </label>
+                                            <input type="radio" id="amount-7" name="Amount" value="@ViewBag.SingleCards.ThirdPrice">
+                                            <label for="amount-7">
+                                                <span></span>$@ViewBag.SingleCards.ThirdPrice
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>Donation Amount</h4>
+                                        <div class="radio-inputs">
+                                            <input type="radio" id="one-time" name="Pay_Type" value="one-time">
+                                            <label for="one-time">
+                                                <span></span>One Time
+                                            </label>
+                                            <input type="radio" id="monthly" name="Pay_Type" value="monthly">
+                                            <label for="monthly">
+                                                <span></span>Monthly
+                                            </label>
+                                            <input type="radio" id="yearly" name="Pay_Type" value="yearly">
+                                            <label for="yearly">
+                                                <span></span>Yearly
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>Credit Card</h4>
+                                        <select name="Card_Type" id="credit_card" style="background:url(/Uploads/select-arrow.png) right no-repeat;">
+                                            <option value="Visa">Visa</option>
+                                            <option value="Master Card">Master Card</option>
+                                        </select>
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>Card Number</h4>
+                                        <input type="number" name="Card_Number">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>MM/YY</h4>
+                                        <input type="text" name="Date">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <h4>CVC</h4>
+                                        <input type="number" name="Card_CVC">
+                                    </div>
+                                    <div class="field col-sm-6">
+                                        <button class="btn btn-big btn-solid ">
+                                            <i class="fa fa-archive"></i>
+                                            <span style="color:white">Donate Now</span>
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div style="margin-top:40px;padding:0px" class="field col-md-12 col-sm-12 col-xs-12">
+                                @if (ViewBag.Error != null)
+                                 {
+                            <h3 style="color:red">@ViewBag.Error</h3>
+                                 }
+
+                                @if (ViewBag.Success != null)
+                                 { 
+                            <div class="col-md-12" style="height:100px; background-color:#F2B25B; border-radius:10px;text-align:center;padding-top:35px;margin-top:30px;">
+                                <h2 style="color:white; font-family:Raleway, sans-serif;">@ViewBag.Success</h2>
+                            </div>
+                                 }       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+﻿@using Gives.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<a style="font-weight:700;font-size:20px;margin-bottom:30px" href="@Url.Action("Create","AddPost")">Create Post</a>
+
+
+<!--Table-->
+<table class="table col-xs-6">
+    <!--Table head-->
+    <thead class="blue-grey lighten-4">
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Date</th>
+            <th>Image</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Post ps in ViewBag.Post)
+        {
+            <tr>
+                <td>@ps.Title</td>
+                <td>@ps.Content</td>
+                <td>@Convert.ToDateTime(ps.Date).ToString("dd MMMM, yyyy")</td>
+                <td><img style="min-width:400px;max-width:400px;min-height:250px;max-height:250px" src="~/Uploads/@ps.Image" class="img-circle"></td>
+                <td><a style="font-weight:500;font-size:17px" href="@Url.Action("Edit", "AddPost", new { id=ps.Id })">Edit</a></td>
+                <td><a style="font-weight:500;font-size:17px" href="@Url.Action("Delete", "AddPost", new { id=ps.Id })">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

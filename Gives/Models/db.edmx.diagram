@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37524c00df7e41b5b593b81aeffb2596" Name="Diagram1">
+        <EntityTypeShape EntityType="GivesModel.About_Masking" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.About_Partners" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.About_Section" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Administrator" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Blog_List_Masking" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Grid_Masking" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Grid_Recent" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_List_Recent" Width="1.5" PointX="7.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Single_Cards" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Single_Masking" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Single_Paypal" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Single_PayTitle" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Causes_Single_Recent" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Contact_Map" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Contact_Masking" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Contact_Message" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Footer" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Gallery_Masking" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Home_Cause" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Home_Gallery" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Home_Need" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Home_Recent" Width="1.5" PointX="15.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Home_Volunteer" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.PayPal_Donate" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Post" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Post_To_Tag" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Tag" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.User" Width="1.5" PointX="2.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GivesModel.Visa_Master_Donate" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="GivesModel.FK__Post_To_T__Post___797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="GivesModel.FK__Post_To_T__Tag_I__7A672E12" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GivesModel.Home_Slider" Width="1.5" PointX="9.375" PointY="16.75" />
+        <EntityTypeShape EntityType="GivesModel.Home_Work_Us" Width="1.5" PointX="16.375" PointY="11.75" />
+        <EntityTypeShape EntityType="GivesModel.Feature" Width="1.5" PointX="5.375" PointY="17.75" />
+        <EntityTypeShape EntityType="GivesModel.Causes_List_Masking" Width="1.5" PointX="11.375" PointY="17.75" />
+        <EntityTypeShape EntityType="GivesModel.Gallery_Images" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GivesModel.Contact_Adress" Width="1.5" PointX="18.375" PointY="3.75" />
+        <EntityTypeShape EntityType="GivesModel.Category" Width="1.5" PointX="18.375" PointY="7" />
+        <EntityTypeShape EntityType="GivesModel.News" Width="1.5" PointX="18.375" PointY="15.5" />
+        <EntityTypeShape EntityType="GivesModel.News_To_Category" Width="1.5" PointX="20.625" PointY="6.875" />
+        <AssociationConnector Association="GivesModel.FK__News_To_C__Categ__42E1EEFE" />
+        <AssociationConnector Association="GivesModel.FK__News_To_C__News___41EDCAC5" />
+        <EntityTypeShape EntityType="GivesModel.Become_Volunteer" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="GivesModel.User_Messages" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="GivesModel.Blog_Single_Masking" Width="1.5" PointX="3.375" PointY="13.75" />
+        <EntityTypeShape EntityType="GivesModel.CommentNew" Width="1.5" PointX="20.625" PointY="13.375" />
+        <AssociationConnector Association="GivesModel.FK__CommentNe__News___625A9A57" />
+        <AssociationConnector Association="GivesModel.FK__CommentNe__Users__634EBE90" />
+        <EntityTypeShape EntityType="GivesModel.CommentPost" Width="1.5" PointX="5" PointY="9.875" />
+        <AssociationConnector Association="GivesModel.FK__CommentPo__Post___756D6ECB" />
+        <AssociationConnector Association="GivesModel.FK__CommentPo__Users__76619304" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

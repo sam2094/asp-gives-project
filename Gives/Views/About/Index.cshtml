@@ -1,0 +1,120 @@
+﻿@using Gives.Models
+
+<!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.AboutMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.AboutMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.AboutMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.AboutMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* About Volunteers Start *-*-*-* -->
+<div class="about-section" style="background-color:white;">
+    <div class="about-history container">
+        <div class="row " style="margin-bottom:40px">
+            <div class="col-md-6 ">
+                <div class="image-wrapper">
+                    <img class="img-responsive" src="~/Uploads/@ViewBag.AboutSection.Image">
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="about-right" style="padding-top:0px">
+                    <div class="about-title">
+                        <h4>@ViewBag.AboutSection.Title</h4>
+                    </div>
+                    <p class="first">
+                        @ViewBag.AboutSection.Text_First
+                    </p>
+                    <p class="second">
+                        @ViewBag.AboutSection.Text_Second
+                    </p>
+                    <a href="@Url.Action("Index", "AboutInfo")" class="btn btn-min btn-secondary">
+                        <span>Learn More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* About Volunteers End *-*-*-* -->
+<!-- *-*-*-* Voolunters Team Start*-*-*-* -->
+<div class="team-wrapper" style="background-color:#F8F8F8;">
+    <div class="container">
+        <div class="section-name first">
+            <h2>our volunteers</h2>
+            <div class="text-mini">
+                <h5>We are all times support them for their smile</h5>
+            </div>
+        </div>
+
+        <div class="team-members row">
+
+            @for (var i = 0; i < @ViewBag.HomeVolunteer.Count; i++)
+            {
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-member">
+                        <div class="best-volunteer" style="margin-bottom:50px;">
+                            <div class="voluntee-image">
+                                <a href="@Url.Action("Index", "Volunteers", new { id=@ViewBag.HomeVolunteer[i].Id })">
+                                    <img src="~/Uploads/@ViewBag.HomeVolunteer[i].Image">
+                                </a>
+                            </div>
+                            <ul class="socials">
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Twitter" title="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Facebook" title="">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.HomeVolunteer[i].Youtube" title="">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <span>
+                                <a>@ViewBag.HomeVolunteer[i].Amount</a>
+                            </span>
+                            <h2>
+                                <a href="@Url.Action("Index", "Volunteers", new { id=@ViewBag.HomeVolunteer[i].Id })" title="">@ViewBag.HomeVolunteer[i].Fullname</a>
+                            </h2>
+                            <p>@ViewBag.HomeVolunteer[i].Content</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Voolunters Team End*-*-*-* -->
+<!-- *-*-*-* About Slider Partners Start *-*-*-* -->
+<div class="partners-section">
+    <div class="container">
+        <div class="row">
+            <div id="slider-partner" class="owl-carousel owl-theme owl-transition clearfix">
+                @foreach (About_Partners ap in ViewBag.Partners)
+                 {
+            <div class="item">
+                <a href="@ap.Website">
+                    <img class="img-responsive" src="~/Uploads/@ap.Image">
+                </a>
+            </div>
+                 }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* About Slider Partners End *-*-*-* -->

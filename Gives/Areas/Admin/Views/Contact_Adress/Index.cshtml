@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Gives.Models.Contact_Adress>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Adress</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second_Email)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Second_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Second_Email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,48 @@
+﻿@model Gives.Models.Become_Volunteer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+
+<div class="col-md-12">
+    <h4>Volunteering applications</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fullname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-group form-responce">
+        <input type="submit" value="Delete" class="btn btn-default" />
+        <div class="return-back">
+            <h3>@Html.ActionLink("Back to List", "Index")</h3>
+        </div>
+    </div>
+    }
+</div>

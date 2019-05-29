@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Google Map</h2>
+<style>
+
+    #map {
+        height: 630px;
+        width: 100%;
+        margin-top: 30px;
+    }
+  
+ 
+</style>
+<div id="map"></div>
+<script>
+    var map;
+    var locatonMap = "@ViewBag.Map.Map_Location";
+    var settingsArray = locatonMap.split(",");
+    var latMap = Number(settingsArray[0]);
+    var lonMap = Number(settingsArray[1]);
+    var uluru = { lat: latMap, lng: lonMap };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: uluru,
+            zoom: 14,
+            styles: [
+                { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#263c3f' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#6b9a76' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#38414e' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#212a37' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#9ca5b3' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#746855' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#1f2835' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#f3d19c' }]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#2f3948' }]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#17263c' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#515c6d' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ color: '#17263c' }]
+                }
+            ]
+          });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            draggable: true
+        });
+         
+           
+        marker.addListener('dragend', function (event) {
+            var value = event.latLng.lat() + "," + event.latLng.lng();
+            var input = document.querySelector("input[name=Map_Location]");
+            input.value = value;
+        });
+
+        var contentString = '<div id="content">' + 
+        '<h1 class="h1">Gives Support </h1>' +
+            '<p class="lead"> Find Us <a target="_blank" href="http://localhost:2723/Admin/Map">Here </a></p>' + '</div>';     
+        var infowindow = new google.maps.InfoWindow({
+            content:contentString
+        });
+        marker.addListener("click", function () {
+            infowindow.open(map, marker);
+        });
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX_VYNQXKXPnY_QmUYRlu82JLTJxk44LA&callback=initMap"
+        async defer></script>
+<div class=" row">
+    <div class="col-md-12 form-responce">
+            <form method="post">
+                <div class="form-group">
+                    <input style="width:150px;margin-top:610px;margin-left:-300px;" type="submit" value="Save Changes" class=" btn btn-default pull-right" />
+                    <input class="form-control pull-left" type="hidden" name="Map_Location" />
+                </div>
+            </form>
+    </div>
+</div>

@@ -1,0 +1,232 @@
+﻿@using Gives.Models
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- *-*-*-* Causes-Image Start *-*-*-* -->
+<div class="cause-image" style="background-image:url(/Uploads/@ViewBag.BlogSingleMasking.Image)">
+    <div class="container">
+        <div class="layout-masking"></div>
+        <div class="section-name">
+            <h2>@ViewBag.BlogSingleMasking.Title</h2>
+            <div class="text-mini">
+                <h5>
+                    @ViewBag.BlogSingleMasking.Text_First
+                    <i class="fa fa-angle-double-right"></i>@ViewBag.BlogSingleMasking.Text_Second
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Causes Image End *-*-*-* -->
+<!-- *-*-*-* Blog start*-*-*-* -->
+<div class="blog-page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="blog-posts col-md-8">
+                <div class="blog-post single-post">
+                    <a href="blog-single.html">
+                        <h2>@ViewBag.ActiveNews.Title</h2>
+                    </a>
+                    <div class="meta">
+                        <h5>
+                            <i class="fa fa-user"></i>
+                            <a>@ViewBag.Author.Fullname</a>
+                        </h5>
+                        <h5>
+                            <i class="fa fa-clock-o"></i>
+                            <a>@Convert.ToDateTime(ViewBag.ActiveNews.Dates).ToString("dd MMMM yyyy")</a>
+                        </h5>
+                        <h5>
+                            <i class="fa fa-comment"></i>
+                            <a>@ViewBag.CommentCount Comments</a>
+                        </h5>
+                    </div>
+                    <div class="img-wrapper">
+                        <img style="min-width:750px;max-width:750px;min-height:312px;max-height:312px;" class="img-responsive" src="~/Uploads/@ViewBag.ActiveNews.Image" alt="">
+                    </div>
+                    <p class="first">
+                        @ViewBag.ActiveNews.First_Content
+                    </p>
+
+                    <h4 class="subheader">The main thing</h4>
+                    <p>
+                        @ViewBag.ActiveNews.Second_Content
+                    </p>
+                    <blockquote>
+                        <i class="fa fa-quote-left"></i>
+                        <p>
+                            @ViewBag.ActiveNews.States
+                        </p>
+                    </blockquote>
+                    <p>
+                        @ViewBag.ActiveNews.Content
+                    </p>
+                </div>
+                <div style="margin-top:40px" class="single-post-footer">
+                    <div class="comments-wrapper">
+                        <div class="widget-title">
+                            <h4>There are @ViewBag.CommentCount comments</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            @foreach (CommentNew cm in ViewBag.Comments)
+    {
+                        <div class="comment">
+                            <img class="user-image" style="max-height:85px;min-height:85px;min-width:85px;max-width:85px;" src="~/Uploads/@cm.User.Image">
+                            <div class="info-block">
+                                <h4 class="user">
+                                    @cm.User.Name @cm.User.Surname
+                                    <span>
+                                        @Convert.ToDateTime(cm.Dates).ToString("MMM dd, yyyy, H:mm"
+                    )
+                                    </span>
+
+
+                                </h4>
+                                <p>
+                                    @cm.Content
+                                </p>
+                                <button class="btn btn-min btn-solid">
+                                    <span>Replay</span>
+                                </button>
+                            </div>
+                        </div>
+
+}
+
+                        </div>
+                    </div>
+
+                    @if (Session["UserLogged"] != null)
+                    {
+                        <div class="comment-form-wrapper">
+                            <div class="widget-title">
+                                <h4>Leave a comment</h4>
+                                <div class="sep">
+                                    <div class="sep-inside"></div>
+                                </div>
+                            </div>
+                            <form class="comment-form" action="#" name="comment" method="post">
+                                <div class="field">
+                                    <h4>Message</h4>
+                                    <textarea name="Content"></textarea>
+                                </div>
+                                <div class="field">
+                                    <button class="btn btn-min btn-solid">Send Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="margin-top:30px" class="widget-title">
+                            <h4 style="text-transform:none">Please <a href="@Url.Action("Login", "UserAccount")">log in</a>  or <a href="@Url.Action("Register", "UserAccount")">register</a>  to post comments.</h4>
+                        </div>
+                    }
+                    @if (ViewBag.Error != null)
+                    {
+                        <h3 style="color:red;margin-top:20px;font-family:'Times New Roman', Times, serif">@ViewBag.Error </h3>
+                    }
+                    else if (ViewBag.Success != null)
+                    {
+                        <div style="height:100px; background-color:#F2B25B; border-radius:10px;text-align:center;padding-top:35px;margin-top:30px">
+                            <h2 style="color:white; font-family:Raleway, sans-serif;">@ViewBag.Success</h2>
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- sidebar -->
+            <div class="sidebar-wrapper col-md-4">
+                <div class="sidebar">
+                    <div class="search-bar">
+                        <form action="#">
+                            <div class="field">
+                                <input type="text" name="search" placeholder="Type and Hit Enter">
+                                <button>
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Categories of News</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="categories">
+                            @for (var i = 0; i < ViewBag.Category.Count; i++)
+                            {
+                                <a href="@Url.Action("Index", "NewsWithCategory", new { id=ViewBag.Category[i].Id })">
+                                    @ViewBag.Category[i].Name
+                                    <span>@ViewBag.NewsCount[i]</span>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Recent Posts</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="recent-posts clearfix">
+                            @foreach (Post pt in ViewBag.Post)
+                            {
+                                <div class="post clearfix">
+                                    <div class="image-wrapper">
+                                        <div class="mask">
+                                            <a href="@Url.Action("Index", "PostContent", new { id=@pt.Id })">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                        <img style="min-width:75px;max-width:75px;min-height:75px;max-height:75px" src="~/Uploads/@pt.Image">
+                                    </div>
+                                    <div class="info-block">
+                                        <a href="@Url.Action("Index", "PostContent", new { id=@pt.Id })">
+                                            <h4>@pt.Title</h4>
+                                        </a>
+                                        <div class="meta">
+                                            <p>
+                                                <i class="fa fa-user"></i>@ViewBag.Author.Fullname
+                                            </p>
+                                            <span>&#x7C;</span>
+                                            <p>
+                                                <i class="fa fa-clock-o"></i>@Convert.ToDateTime(pt.Date).ToString("dd MMMM , yyyy")
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Tags to Posts</h4>
+                            <div class="sep">
+                                <div class="sep-inside"></div>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            @foreach (Tag tg in ViewBag.Tag)
+                            {
+                                <a href="@Url.Action("Index", "PostToTag", new { id=tg.Id })">
+                                    <span>@tg.Name</span>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *-*-*-* Blog End*-*-*-* -->

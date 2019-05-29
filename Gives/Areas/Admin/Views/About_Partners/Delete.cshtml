@@ -1,0 +1,41 @@
+﻿@model Gives.Models.About_Partners
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+
+<div>
+    <h4>About_Partners</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-group form-responce">
+        <input type="submit" value="Delete" class="btn btn-default" /> 
+        <div class="return-back">
+            <h3>@Html.ActionLink("Back to List", "Index")</h3>
+        </div>
+    </div>
+    }
+</div>

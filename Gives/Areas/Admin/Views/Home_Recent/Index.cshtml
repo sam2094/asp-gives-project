@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Gives.Models.Home_Recent>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Support's Causes</h2>
+
+<div style="margin-top:50px;margin-bottom:20px; margin-left:-250px;">
+    <h3>
+        @Html.ActionLink("Create New", "Create")
+    </h3>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Recent_Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recent_Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Progres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recent_Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recent_Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Second_Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Progres)
+            </td>
+            <td>
+                <img src="~/Uploads/@item.Image" class="img-circle">
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GivesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="About_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="About_Partners">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Website" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="About_Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Information" Type="nvarchar(max)" />
+    <Property Name="Text_First" Type="nvarchar(max)" />
+    <Property Name="Text_Second" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Become_Volunteer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Information" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blog_List_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Blog_Single_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="100" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="100" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Causes_Grid_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Causes_Grid_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Recent_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="250" />
+    <Property Name="First_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Causes_List_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Causes_List_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Recent_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="250" />
+    <Property Name="First_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Cards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstPrice" Type="int" />
+    <Property Name="SecondPrice" Type="int" />
+    <Property Name="ThirdPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Paypal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstPrice" Type="int" />
+    <Property Name="SecondPrice" Type="int" />
+    <Property Name="ThirdPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="Causes_Single_PayTitle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="First_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Donors" Type="int" />
+    <Property Name="Days" Type="int" />
+    <Property Name="Content1" Type="nvarchar(max)" />
+    <Property Name="Content2" Type="nvarchar(max)" />
+    <Property Name="Content3" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CommentNews">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Dates" Type="datetime" />
+    <Property Name="News_Id" Type="int" />
+    <Property Name="Users_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="CommentPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Dates" Type="datetime" />
+    <Property Name="Post_Id" Type="int" />
+    <Property Name="Users_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Contact_Adress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+    <Property Name="First_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Second_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="First_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Second_Number" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contact_Map">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Map_Location" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Contact_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Contact_Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="Message_Content" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Feature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" />
+    <Property Name="Information" Type="nvarchar(max)" />
+    <Property Name="Fa_Icon" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Footer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Twitter" Type="nvarchar" MaxLength="200" />
+    <Property Name="Google" Type="nvarchar" MaxLength="255" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="255" />
+    <Property Name="LInkedin" Type="nvarchar" MaxLength="255" />
+    <Property Name="Scype" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Gallery_Images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Width" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Gallery_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_Second" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Home_Cause">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" />
+    <Property Name="First_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Progress" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Home_Gallery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Home_Need">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Content" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Home_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Recent_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Recent_Content" Type="nvarchar" MaxLength="255" />
+    <Property Name="First_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Progres" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="Status3" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Home_Slider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Content2" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Home_Volunteer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar" MaxLength="255" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Twitter" Type="nvarchar" MaxLength="255" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="255" />
+    <Property Name="Youtube" Type="nvarchar" MaxLength="255" />
+    <Property Name="Information" Type="nvarchar(max)" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="Status2" Type="tinyint" />
+    <Property Name="Status3" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Home_Work_Us">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dates" Type="datetime" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="First_Content" Type="nvarchar(max)" />
+    <Property Name="Second_Content" Type="nvarchar(max)" />
+    <Property Name="States" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="News_To_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="News_Id" Type="int" />
+    <Property Name="Category_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="PayPal_Donate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Card_Number" Type="int" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post_To_Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Post_Id" Type="int" />
+    <Property Name="Tag_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Messages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subjects" Type="nvarchar" MaxLength="250" />
+    <Property Name="Mesage" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="250" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Visa_Master_Donate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pay_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Number" Type="int" />
+    <Property Name="Card_CVC" Type="int" />
+    <Property Name="Date" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__CommentNe__News___25518C17">
+    <End Role="News" Type="Self.News" Multiplicity="0..1" />
+    <End Role="CommentNews" Type="Self.CommentNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNews">
+        <PropertyRef Name="News_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommentNe__Users__2645B050">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="CommentNews" Type="Self.CommentNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNews">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommentPo__Post___2739D489">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="CommentPost" Type="Self.CommentPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentPost">
+        <PropertyRef Name="Post_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommentPo__Users__282DF8C2">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="CommentPost" Type="Self.CommentPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentPost">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__News_To_C__Categ__2A164134">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="News_To_Category" Type="Self.News_To_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="News_To_Category">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__News_To_C__News___29221CFB">
+    <End Role="News" Type="Self.News" Multiplicity="0..1" />
+    <End Role="News_To_Category" Type="Self.News_To_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="News_To_Category">
+        <PropertyRef Name="News_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Post_To_T__Post___2B0A656D">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="Post_To_Tag" Type="Self.Post_To_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post_To_Tag">
+        <PropertyRef Name="Post_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Post_To_T__Tag_I__2BFE89A6">
+    <End Role="Tag" Type="Self.Tag" Multiplicity="0..1" />
+    <End Role="Post_To_Tag" Type="Self.Post_To_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post_To_Tag">
+        <PropertyRef Name="Tag_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GivesModelStoreContainer">
+    <EntitySet Name="About_Masking" EntityType="Self.About_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="About_Partners" EntityType="Self.About_Partners" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="About_Section" EntityType="Self.About_Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Administrator" EntityType="Self.Administrator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Become_Volunteer" EntityType="Self.Become_Volunteer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog_List_Masking" EntityType="Self.Blog_List_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog_Single_Masking" EntityType="Self.Blog_Single_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Grid_Masking" EntityType="Self.Causes_Grid_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Grid_Recent" EntityType="Self.Causes_Grid_Recent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_List_Masking" EntityType="Self.Causes_List_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_List_Recent" EntityType="Self.Causes_List_Recent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Single_Cards" EntityType="Self.Causes_Single_Cards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Single_Masking" EntityType="Self.Causes_Single_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Single_Paypal" EntityType="Self.Causes_Single_Paypal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Single_PayTitle" EntityType="Self.Causes_Single_PayTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Causes_Single_Recent" EntityType="Self.Causes_Single_Recent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentNews" EntityType="Self.CommentNews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentPost" EntityType="Self.CommentPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Adress" EntityType="Self.Contact_Adress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Map" EntityType="Self.Contact_Map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Masking" EntityType="Self.Contact_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Message" EntityType="Self.Contact_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feature" EntityType="Self.Feature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Footer" EntityType="Self.Footer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gallery_Images" EntityType="Self.Gallery_Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gallery_Masking" EntityType="Self.Gallery_Masking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Cause" EntityType="Self.Home_Cause" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Gallery" EntityType="Self.Home_Gallery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Need" EntityType="Self.Home_Need" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Recent" EntityType="Self.Home_Recent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Slider" EntityType="Self.Home_Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Volunteer" EntityType="Self.Home_Volunteer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home_Work_Us" EntityType="Self.Home_Work_Us" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News_To_Category" EntityType="Self.News_To_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayPal_Donate" EntityType="Self.PayPal_Donate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post_To_Tag" EntityType="Self.Post_To_Tag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Messages" EntityType="Self.User_Messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visa_Master_Donate" EntityType="Self.Visa_Master_Donate" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CommentNe__News___25518C17" Association="Self.FK__CommentNe__News___25518C17">
+      <End Role="News" EntitySet="News" />
+      <End Role="CommentNews" EntitySet="CommentNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommentNe__Users__2645B050" Association="Self.FK__CommentNe__Users__2645B050">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CommentNews" EntitySet="CommentNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommentPo__Post___2739D489" Association="Self.FK__CommentPo__Post___2739D489">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="CommentPost" EntitySet="CommentPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommentPo__Users__282DF8C2" Association="Self.FK__CommentPo__Users__282DF8C2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CommentPost" EntitySet="CommentPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK__News_To_C__Categ__2A164134" Association="Self.FK__News_To_C__Categ__2A164134">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="News_To_Category" EntitySet="News_To_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__News_To_C__News___29221CFB" Association="Self.FK__News_To_C__News___29221CFB">
+      <End Role="News" EntitySet="News" />
+      <End Role="News_To_Category" EntitySet="News_To_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Post_To_T__Post___2B0A656D" Association="Self.FK__Post_To_T__Post___2B0A656D">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Post_To_Tag" EntitySet="Post_To_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Post_To_T__Tag_I__2BFE89A6" Association="Self.FK__Post_To_T__Tag_I__2BFE89A6">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="Post_To_Tag" EntitySet="Post_To_Tag" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

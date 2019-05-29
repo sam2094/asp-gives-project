@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GivesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="About_Partners">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="About_Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Blog_List_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Causes_Grid_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Causes_Grid_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Recent_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="First_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Causes_List_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Recent_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="First_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Cards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstPrice" Type="Int32" />
+    <Property Name="SecondPrice" Type="Int32" />
+    <Property Name="ThirdPrice" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Paypal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstPrice" Type="Int32" />
+    <Property Name="SecondPrice" Type="Int32" />
+    <Property Name="ThirdPrice" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Causes_Single_PayTitle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Causes_Single_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="First_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Progress" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Donors" Type="Int32" />
+    <Property Name="Days" Type="Int32" />
+    <Property Name="Content1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact_Map">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Map_Location" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact_Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Message_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Footer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Twitter" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Google" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Facebook" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LInkedin" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Scype" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gallery_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Home_Cause">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="First_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Progress" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Home_Gallery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Home_Need">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Home_Recent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Recent_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Recent_Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="First_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Second_Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Progres" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" />
+    <Property Name="Status3" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Home_Volunteer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Twitter" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Facebook" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Youtube" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" />
+    <Property Name="Status2" Type="Byte" />
+    <Property Name="Status3" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PayPal_Donate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Card_Number" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Post_To_Tag" Relationship="Self.FK__Post_To_T__Post___797309D9" FromRole="Post" ToRole="Post_To_Tag" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CommentPosts" Relationship="GivesModel.FK__CommentPo__Post___756D6ECB" FromRole="Post" ToRole="CommentPost" />
+  </EntityType>
+  <EntityType Name="Post_To_Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Post_Id" Type="Int32" />
+    <Property Name="Tag_Id" Type="Int32" />
+    <NavigationProperty Name="Post" Relationship="Self.FK__Post_To_T__Post___797309D9" FromRole="Post_To_Tag" ToRole="Post" />
+    <NavigationProperty Name="Tag" Relationship="Self.FK__Post_To_T__Tag_I__7A672E12" FromRole="Post_To_Tag" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Post_To_Tag" Relationship="Self.FK__Post_To_T__Tag_I__7A672E12" FromRole="Tag" ToRole="Post_To_Tag" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CommentNews" Relationship="GivesModel.FK__CommentNe__Users__634EBE90" FromRole="User" ToRole="CommentNew" />
+    <NavigationProperty Name="CommentPosts" Relationship="GivesModel.FK__CommentPo__Users__76619304" FromRole="User" ToRole="CommentPost" />
+  </EntityType>
+  <EntityType Name="Visa_Master_Donate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pay_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Card_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Card_Number" Type="Int32" />
+    <Property Name="Card_CVC" Type="Int32" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__Post_To_T__Post___797309D9">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="Post_To_Tag" Type="Self.Post_To_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post_To_Tag">
+        <PropertyRef Name="Post_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Post_To_T__Tag_I__7A672E12">
+    <End Role="Tag" Type="Self.Tag" Multiplicity="0..1" />
+    <End Role="Post_To_Tag" Type="Self.Post_To_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Post_To_Tag">
+        <PropertyRef Name="Tag_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GivesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About_Masking" EntityType="Self.About_Masking" />
+    <EntitySet Name="About_Partners" EntityType="Self.About_Partners" />
+    <EntitySet Name="About_Section" EntityType="Self.About_Section" />
+    <EntitySet Name="Administrators" EntityType="Self.Administrator" />
+    <EntitySet Name="Blog_List_Masking" EntityType="Self.Blog_List_Masking" />
+    <EntitySet Name="Causes_Grid_Masking" EntityType="Self.Causes_Grid_Masking" />
+    <EntitySet Name="Causes_Grid_Recent" EntityType="Self.Causes_Grid_Recent" />
+    <EntitySet Name="Causes_List_Recent" EntityType="Self.Causes_List_Recent" />
+    <EntitySet Name="Causes_Single_Cards" EntityType="Self.Causes_Single_Cards" />
+    <EntitySet Name="Causes_Single_Masking" EntityType="Self.Causes_Single_Masking" />
+    <EntitySet Name="Causes_Single_Paypal" EntityType="Self.Causes_Single_Paypal" />
+    <EntitySet Name="Causes_Single_PayTitle" EntityType="Self.Causes_Single_PayTitle" />
+    <EntitySet Name="Causes_Single_Recent" EntityType="Self.Causes_Single_Recent" />
+    <EntitySet Name="Contact_Map" EntityType="Self.Contact_Map" />
+    <EntitySet Name="Contact_Masking" EntityType="Self.Contact_Masking" />
+    <EntitySet Name="Contact_Message" EntityType="Self.Contact_Message" />
+    <EntitySet Name="Footers" EntityType="Self.Footer" />
+    <EntitySet Name="Gallery_Masking" EntityType="Self.Gallery_Masking" />
+    <EntitySet Name="Home_Cause" EntityType="Self.Home_Cause" />
+    <EntitySet Name="Home_Gallery" EntityType="Self.Home_Gallery" />
+    <EntitySet Name="Home_Need" EntityType="Self.Home_Need" />
+    <EntitySet Name="Home_Recent" EntityType="Self.Home_Recent" />
+    <EntitySet Name="Home_Volunteer" EntityType="Self.Home_Volunteer" />
+    <EntitySet Name="PayPal_Donate" EntityType="Self.PayPal_Donate" />
+    <EntitySet Name="Posts" EntityType="Self.Post" />
+    <EntitySet Name="Post_To_Tag" EntityType="Self.Post_To_Tag" />
+    <EntitySet Name="Tags" EntityType="Self.Tag" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Visa_Master_Donate" EntityType="Self.Visa_Master_Donate" />
+    <AssociationSet Name="FK__Post_To_T__Post___797309D9" Association="Self.FK__Post_To_T__Post___797309D9">
+      <End Role="Post" EntitySet="Posts" />
+      <End Role="Post_To_Tag" EntitySet="Post_To_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Post_To_T__Tag_I__7A672E12" Association="Self.FK__Post_To_T__Tag_I__7A672E12">
+      <End Role="Tag" EntitySet="Tags" />
+      <End Role="Post_To_Tag" EntitySet="Post_To_Tag" />
+    </AssociationSet>
+    <EntitySet Name="Home_Slider" EntityType="GivesModel.Home_Slider" />
+    <EntitySet Name="Home_Work_Us" EntityType="GivesModel.Home_Work_Us" />
+    <EntitySet Name="Features" EntityType="GivesModel.Feature" />
+    <EntitySet Name="Causes_List_Masking" EntityType="GivesModel.Causes_List_Masking" />
+    <EntitySet Name="Gallery_Images" EntityType="GivesModel.Gallery_Images" />
+    <EntitySet Name="Contact_Adress" EntityType="GivesModel.Contact_Adress" />
+    <EntitySet Name="Categories" EntityType="GivesModel.Category" />
+    <EntitySet Name="News" EntityType="GivesModel.News" />
+    <EntitySet Name="News_To_Category" EntityType="GivesModel.News_To_Category" />
+    <AssociationSet Name="FK__News_To_C__Categ__42E1EEFE" Association="GivesModel.FK__News_To_C__Categ__42E1EEFE">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="News_To_Category" EntitySet="News_To_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__News_To_C__News___41EDCAC5" Association="GivesModel.FK__News_To_C__News___41EDCAC5">
+      <End Role="News" EntitySet="News" />
+      <End Role="News_To_Category" EntitySet="News_To_Category" />
+    </AssociationSet>
+    <EntitySet Name="Become_Volunteer" EntityType="GivesModel.Become_Volunteer" />
+    <EntitySet Name="User_Messages" EntityType="GivesModel.User_Messages" />
+    <EntitySet Name="Blog_Single_Masking" EntityType="GivesModel.Blog_Single_Masking" />
+    <EntitySet Name="CommentNews" EntityType="GivesModel.CommentNew" />
+    <AssociationSet Name="FK__CommentNe__News___625A9A57" Association="GivesModel.FK__CommentNe__News___625A9A57">
+      <End Role="News" EntitySet="News" />
+      <End Role="CommentNew" EntitySet="CommentNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommentNe__Users__634EBE90" Association="GivesModel.FK__CommentNe__Users__634EBE90">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CommentNew" EntitySet="CommentNews" />
+    </AssociationSet>
+    <EntitySet Name="CommentPosts" EntityType="GivesModel.CommentPost" />
+    <AssociationSet Name="FK__CommentPo__Post___756D6ECB" Association="GivesModel.FK__CommentPo__Post___756D6ECB">
+      <End Role="Post" EntitySet="Posts" />
+      <End Role="CommentPost" EntitySet="CommentPosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommentPo__Users__76619304" Association="GivesModel.FK__CommentPo__Users__76619304">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CommentPost" EntitySet="CommentPosts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Home_Slider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Content2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Home_Work_Us">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Feature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fa_Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Style" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Causes_List_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gallery_Images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Width" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact_Adress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="First_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="First_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="News_To_Category" Relationship="GivesModel.FK__News_To_C__Categ__42E1EEFE" FromRole="Category" ToRole="News_To_Category" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Dates" Type="DateTime" Precision="3" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="First_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="States" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="News_To_Category" Relationship="GivesModel.FK__News_To_C__News___41EDCAC5" FromRole="News" ToRole="News_To_Category" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CommentNews" Relationship="GivesModel.FK__CommentNe__News___625A9A57" FromRole="News" ToRole="CommentNew" />
+  </EntityType>
+  <EntityType Name="News_To_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="News_Id" Type="Int32" />
+    <Property Name="Category_Id" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="GivesModel.FK__News_To_C__Categ__42E1EEFE" FromRole="News_To_Category" ToRole="Category" />
+    <NavigationProperty Name="News" Relationship="GivesModel.FK__News_To_C__News___41EDCAC5" FromRole="News_To_Category" ToRole="News" />
+  </EntityType>
+  <Association Name="FK__News_To_C__Categ__42E1EEFE">
+    <End Type="GivesModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="GivesModel.News_To_Category" Role="News_To_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="News_To_Category">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__News_To_C__News___41EDCAC5">
+    <End Type="GivesModel.News" Role="News" Multiplicity="0..1" />
+    <End Type="GivesModel.News_To_Category" Role="News_To_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="News_To_Category">
+        <PropertyRef Name="News_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Become_Volunteer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Messages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subjects" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Mesage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blog_Single_Masking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text_First" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Text_Second" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CommentNew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dates" Type="DateTime" Precision="3" />
+    <Property Name="News_Id" Type="Int32" />
+    <Property Name="Users_Id" Type="Int32" />
+    <NavigationProperty Name="News" Relationship="GivesModel.FK__CommentNe__News___625A9A57" FromRole="CommentNew" ToRole="News" />
+    <NavigationProperty Name="User" Relationship="GivesModel.FK__CommentNe__Users__634EBE90" FromRole="CommentNew" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__CommentNe__News___625A9A57">
+    <End Type="GivesModel.News" Role="News" Multiplicity="0..1" />
+    <End Type="GivesModel.CommentNew" Role="CommentNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNew">
+        <PropertyRef Name="News_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommentNe__Users__634EBE90">
+    <End Type="GivesModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="GivesModel.CommentNew" Role="CommentNew" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentNew">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CommentPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dates" Type="DateTime" Precision="3" />
+    <Property Name="Post_Id" Type="Int32" />
+    <Property Name="Users_Id" Type="Int32" />
+    <NavigationProperty Name="Post" Relationship="GivesModel.FK__CommentPo__Post___756D6ECB" FromRole="CommentPost" ToRole="Post" />
+    <NavigationProperty Name="User" Relationship="GivesModel.FK__CommentPo__Users__76619304" FromRole="CommentPost" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__CommentPo__Post___756D6ECB">
+    <End Type="GivesModel.Post" Role="Post" Multiplicity="0..1" />
+    <End Type="GivesModel.CommentPost" Role="CommentPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentPost">
+        <PropertyRef Name="Post_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommentPo__Users__76619304">
+    <End Type="GivesModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="GivesModel.CommentPost" Role="CommentPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentPost">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

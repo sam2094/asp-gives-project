@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Gives.Models.Visa_Master_Donate>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Visa / Master Donations List</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pay_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Card_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Card_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Card_CVC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pay_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card_CVC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+    </tr>
+}
+
+</table>

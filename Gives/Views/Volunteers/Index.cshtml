@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="team-wrapper">
+    <div class="container">
+        <div class="section-name first">
+            <h2>@ViewBag.activeVolunteer.Fullname</h2>
+            <div class="text-mini">
+                <h5>@ViewBag.activeVolunteer.Amount</h5>
+            </div>
+        </div>
+
+        <div class="team-members row">
+            <div class="col-md-3"></div>
+           <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="single-member">
+                        <div class="best-volunteer">
+                            <div class="voluntee-image">
+                                <a>
+                                    <img src="~/Uploads/@ViewBag.activeVolunteer.Image">
+                                </a>
+                            </div>
+                            <ul class="socials">
+                                <li>
+                                    <a href="@ViewBag.activeVolunteer.Twitter" title="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.activeVolunteer.Facebook" title="">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@ViewBag.activeVolunteer.Youtube" title="">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                          
+                            <p style="margin-top:20px">@ViewBag.activeVolunteer.Information...</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
